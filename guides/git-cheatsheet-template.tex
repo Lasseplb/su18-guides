@@ -90,28 +90,28 @@
 \colouredbox{magenta}{
 \subsection{Working with remotes}
 \begin{tabularx}{\hsize}{lX}
-\cmd{clone <url>} & \textit{What does this do? } \\
-\cmd{pull} & \textit{What does this do? }  \\
+\cmd{clone <url>} & \textit{Clones repository located at 'url'.} \\
+\cmd{pull} & \textit{Creates a local copy.}  \\
 \end{tabularx}
 
 \subsection{Create a local repository}
 \begin{tabularx}{\hsize}{lX}
-\cmd{init} & \textit{What does this do? } \\
-\cmd{add .} & \textit{What does this do? } \\
-\cmd{commit} & \textit{What does this do? )} \\
+\cmd{init} & \textit{Creates an empty repository in a specified directory} \\
+\cmd{add .} & \textit{Replaces file at a directory with a given file} \\
+\cmd{commit} & \textit{This "activates" \cmd{add}, add will not affect git repository until commit is run.} \\
 \end{tabularx}
 
 \subsection{Files}
 \begin{tabularx}{\hsize}{lX}
-\cmd{add <file>} & \textit{What does this do? } \\
-\cmd{rm <file>} & \textit{What does this do? } \\
-\cmd{mv <file>} & \textit{What does this do? } \\
+\cmd{add <file>} & \textit{Replaces file at a directory with a given file} \\
+\cmd{rm <file>} & \textit{Remove files} \\
+\cmd{mv <file>} & \textit{Move / rename a file or a directory} \\
 \end{tabularx}
 
 \subsection{Committing}
 \begin{tabularx}{\hsize}{lX}
-\cmd{commit -S} & \textit{What does this do?} \\
-\cmd{commit -S -{}-amend} & \textit{What does this do?} \\
+\cmd{commit -S} & \textit{Add a Signed off by line by the committer of the repository, at the end of the commit log} \\
+\cmd{commit -S -{}-amend} & \textit{Lets you edit the signed off, without having to create a new commit.} \\
 \end{tabularx}
 }
 
@@ -120,19 +120,19 @@
 %\subsection{Configuration}
 %\begin{tabularx}{\hsize}{lX}
 %\cmd{config --{}--global user.name \textbackslash}\\
-%\cmd{  "John Doe"} \textit{What does this do? } \\
+%\cmd{  "John Doe"} \textit{sets the global user name to "John Doe"} \\
 %Email:  & \cmd{config --{}--global user.email \textbackslash}\\
-%        & \cmd{  "email@example.com"} \textit{What does this do? }
+%        & \cmd{  "email@example.com"} \textit{sets the global user email to "email@example.com"}
 %\end{tabularx}
 %}
 
 \colouredbox{green}{
 \subsection{Browsing}
 \begin{tabularx}{\hsize}{lX}
-\cmd{status} & \textit{What does this do? } \\
-\cmd{log} & \textit{What does this do? } \\
-\cmd{blame <file>} & \textit{What does this do? } \\
-\cmd{diff} & \textit{What does this do? }
+\cmd{status} & \textit{Shows the files that are staged, unstaged, and untracked} \\
+\cmd{log} & \textit{Lets you view the commit logs} \\
+\cmd{blame <file>} & \textit{Lets you view what was last modified in a file} \\
+\cmd{diff} & \textit{Show changes between commits.}
 \end{tabularx}
 }
 \newpage
@@ -141,11 +141,11 @@
 \colouredbox{yellow}{
 \section{Branching and Merging}
 \begin{tabularx}{\hsize}{lXr}
-List:     & \cmd{branch} & \textit{What does this do? } \\
-Create:   & \cmd{checkout -b new-branch} & \textit{What does this do? } \\
-Delete:   & \cmd{branch -d new-branch} & \textit{What does this do? } \\
-Checkout: & \cmd{checkout testing} & \textit{What does this do? } \\
-Merge:    & \cmd{merge testing} & \textit{What does this do? }
+List:     & \cmd{branch} & \textit{Allows you to list branches} \\
+Create:   & \cmd{checkout -b new-branch} & \textit{Allows you to create a new branches} \\
+Delete:   & \cmd{branch -d new-branch} & \textit{Allows you to delete branches} \\
+Checkout: & \cmd{checkout testing} & \textit{Allows you to switch branches} \\
+Merge:    & \cmd{merge testing} & \textit{Join branches together.}
 \end{tabularx}
 }
 
@@ -156,18 +156,18 @@ Merge:    & \cmd{merge testing} & \textit{What does this do? }
 \colouredbox{blue2}{
 \section{Remotes}
 \begin{tabularx}{\hsize}{lXr}
-Clone: &     \cmd{clone <url>} & \textit{What does this do? }  \\
-List: &     \cmd{remote -v} & \textit{What does this do? }  \\
-Send: &     \cmd{push } & \textit{What does this do? }  \\
-      &     \cmd{push origin master} & \textit{What does this do? }  \\
-Receive: &     \cmd{pull } & \textit{What does this do? }  \\
-      &     \cmd{pull origin master} & \textit{What does this do? }  \\
-Add:  &     \cmd{remote add <name> <url>} & \textit{What does this do? }  \\
-Fetch:&     \cmd{fetch name} & \textit{What does this do? }  \\
-Checkout:&  \cmd{checkout <name/master>} & \textit{What does this do? }  \\
+Clone: &     \cmd{clone <url>} & \textit{Copies a GIT repository.}  \\
+List: &     \cmd{remote -v} & \textit{Allows you to list remotes.}  \\
+Send: &     \cmd{push } & \textit{Update remote references}  \\
+      &     \cmd{push origin master} & \textit{Update references at the commits from your local master branch to a remote branch.}  \\
+Receive: &     \cmd{pull } & \textit{Integrate with another repository or branch.}  \\
+      &     \cmd{pull origin master} & \textit{Integrate with the commits from your local master branch to a remote branch.}  \\
+Add:  &     \cmd{remote add <name> <url>} & \textit{Adds a remote named <name> for the repository at <url>}  \\
+Fetch:&     \cmd{fetch name} & \textit{Download objects and references from name.}  \\
+Checkout:&  \cmd{checkout <name/master>} & \textit{Allows you to switch by <name/master>}  \\
 \end{tabularx}
 }
-
+%Site used for documentation: https://git-scm.com/
 \begin{flushright}
 \footnotesize
 \rule{0.7\linewidth}{0.25pt}
@@ -181,3 +181,4 @@ Checkout:&  \cmd{checkout <name/master>} & \textit{What does this do? }  \\
 \end{flushright}
 
 \end{document}
+
